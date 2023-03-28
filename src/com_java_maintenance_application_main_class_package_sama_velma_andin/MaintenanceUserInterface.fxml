@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="1252.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com_java_maintenance_application_main_class_package_sama_velma_andin.MaintenanceUserInterfaceController">
+   <children>
+      <TabPane prefHeight="569.0" prefWidth="913.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="HOME">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.183993399339934" layoutX="193.0" layoutY="113.0" orientation="VERTICAL" prefHeight="540.4444444444445" prefWidth="913.3333333333334" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: aqua;">
+                                 <children>
+                                    <Text layoutX="535.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME">
+                                       <font>
+                                          <Font size="63.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <ImageView fitHeight="473.0" fitWidth="1279.0" layoutX="-15.0" layoutY="-19.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../com_java_maintenance_application_image_package_sama_velma_andin/homePageImage.jpg" />
+                                       </image></ImageView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="MAINTENANCE">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.1672854785478548" layoutX="172.0" layoutY="54.0" orientation="VERTICAL" prefHeight="540.4444444444445" prefWidth="1252.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: aqua;">
+                                 <children>
+                                    <Text layoutX="433.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAINTENACE">
+                                       <font>
+                                          <Font size="63.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.16749733001067998" layoutX="91.0" layoutY="174.0" prefHeight="445.77777777777777" prefWidth="1250.2222222222222" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <TextField fx:id="vehicle_inserter" alignment="CENTER" layoutX="13.0" layoutY="36.0" prefHeight="29.0" prefWidth="181.0" promptText="VEHICLE MATRICLE" />
+                                                <TextField fx:id="maintenancePart_inserter" alignment="CENTER" layoutX="13.0" layoutY="101.0" prefHeight="29.0" prefWidth="181.0" promptText="MAINTENANCE PART" />
+                                                <TextField fx:id="maintenanceTime_inserter" alignment="CENTER" layoutX="13.0" layoutY="164.0" prefHeight="29.0" prefWidth="181.0" promptText="MAINTENANCE TIME" />
+                                                <Button fx:id="addButton" layoutX="11.0" layoutY="283.0" mnemonicParsing="false" onAction="#addData" prefHeight="32.0" prefWidth="184.0" style="-fx-background-color: aqua;" text="ADD">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="deleteButton" layoutX="11.0" layoutY="390.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="32.0" prefWidth="184.0" style="-fx-background-color: aqua;" text="DELETE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="clearMaintenanceScheduleButton" layoutX="11.0" layoutY="338.0" mnemonicParsing="false" onAction="#clearData" prefHeight="32.0" prefWidth="184.0" style="-fx-background-color: aqua;" text="CLEAR">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="971.0">
+                                             <children>
+                                                <TableView fx:id="maintenanceTable" editable="true" layoutX="120.0" layoutY="77.0" prefHeight="444.0" prefWidth="1036.4444444444443" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="vehicle_matricule" minWidth="0.0" prefWidth="305.0" text="VEHICLE MATRICLE" />
+                                                      <TableColumn fx:id="maintenance_part" prefWidth="394.0" text="MAINTENANCE PART" />
+                                                      <TableColumn fx:id="maintenance_time" prefWidth="336.0" text="MAINTENANCE TIME" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="INVENTORY">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.1672854785478548" layoutX="172.0" layoutY="54.0" orientation="VERTICAL" prefHeight="540.4444444444445" prefWidth="1252.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: aqua;">
+                                 <children>
+                                    <Text layoutX="457.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVENTORY">
+                                       <font>
+                                          <Font size="63.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.16749733001067998" layoutX="91.0" layoutY="174.0" prefHeight="445.77777777777777" prefWidth="1250.2222222222222" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <TextField fx:id="brand_inserter" alignment="CENTER" layoutX="13.0" layoutY="14.0" prefHeight="29.0" prefWidth="181.0" promptText="BRAND" />
+                                                <TextField fx:id="transmission_inserter" alignment="CENTER" layoutX="13.0" layoutY="58.0" prefHeight="29.0" prefWidth="181.0" promptText="TRANSMISSION" />
+                                                <TextField fx:id="color_inserter" alignment="CENTER" layoutX="13.0" layoutY="99.0" prefHeight="29.0" prefWidth="181.0" promptText="COLOR" />
+                                                <Button fx:id="addButton2" layoutX="11.0" layoutY="297.0" mnemonicParsing="false" onAction="#addData2" prefHeight="32.0" prefWidth="184.0" style="-fx-background-color: aqua;" text="ADD">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="deleteButton2" layoutX="11.0" layoutY="397.0" mnemonicParsing="false" onAction="#deleteData2" prefHeight="32.0" prefWidth="184.0" style="-fx-background-color: aqua;" text="DELETE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                                <TextField fx:id="seat_inserter" alignment="CENTER" layoutX="13.0" layoutY="137.0" prefHeight="29.0" prefWidth="181.0" promptText="SEAT" />
+                                                <TextField fx:id="quantity_inserter" alignment="CENTER" layoutX="13.0" layoutY="175.0" prefHeight="29.0" prefWidth="181.0" promptText="QUANTITY" />
+                                                <TextField fx:id="price_inserter" alignment="CENTER" layoutX="13.0" layoutY="219.0" prefHeight="29.0" prefWidth="181.0" promptText="PRICE" />
+                                                <TextField fx:id="discount_inserter" alignment="CENTER" layoutX="13.0" layoutY="260.0" prefHeight="29.0" prefWidth="181.0" promptText="DISCOUNT" />
+                                                <Button fx:id="clearMaintenanceInventoryButton" layoutX="11.0" layoutY="347.0" mnemonicParsing="false" onAction="#clearData2" prefHeight="32.0" prefWidth="184.0" style="-fx-background-color: aqua;" text="CLEAR">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="971.0">
+                                             <children>
+                                                <TableView fx:id="inventoryTable" editable="true" layoutX="120.0" layoutY="77.0" prefHeight="444.0" prefWidth="1036.4444444444443" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="Car_Name" minWidth="0.0" prefWidth="255.0" text="BRAND" />
+                                                      <TableColumn fx:id="Transmission" prefWidth="136.0" text="TRANSMISSION" />
+                                                      <TableColumn fx:id="Color" maxWidth="196.0" minWidth="0.0" prefWidth="147.0" text="COLOR" />
+                                                      <TableColumn fx:id="Seat" maxWidth="179.0" prefWidth="102.0" text="SEAT" />
+                                                      <TableColumn fx:id="Quantity" maxWidth="227.0" prefWidth="98.0" text="QUANTITY" />
+                                                      <TableColumn fx:id="Price" maxWidth="228.0" prefWidth="167.0" text="PRICE" />
+                                                      <TableColumn fx:id="Discount" maxWidth="259.0" prefWidth="130.0" text="DISCOUNT" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
